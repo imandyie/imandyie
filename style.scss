@@ -1,45 +1,22 @@
 :root {
   --bg-1: #f6f7f8;
   --bg-2: #f6f7f8;
-  --bg-3: #f6f7f8;
-  --navigation-bg-1: rgba(246, 247, 248, 0.9);
-  --navigation-bg-2: rgba(246, 247, 248, 0.9);
-  --navigation-bg-3: rgba(246, 247, 248, 0.9);
-  --navigation-color: #3d3d3d;
-  --global-blue: #3273dc;
   --heading-color: #42465d;
   --dark-text-color: #42465d;
-  --mobile-navbar-bg: #ffffff;
-  --mobile-menu-color: #4a4a4a;
   --contact-description-color: rgba(255, 255, 255, 0.6);
   --contact-links: #f9ffee;
   --contact-heading-color: #ffffff;
-  --post-column-bg: #ffffff;
-  --bookmarks-link-color: #3399fe;
-  --strong-text: #42465d;
-  --date-color: #64687a;
 }
 .lights-off {
   --bg-1: #25241d;
   --bg-2: #1c2129;
-  --bg-3: #222831;
-  --navigation-bg-1: rgba(37, 36, 29, 0.8);
-  --navigation-bg-2: rgba(28, 33, 41, 0.8);
-  --navigation-bg-3: rgba(34, 40, 49, 0.8);
-  --navigation-color: #ffffff;
-  --global-blue: #3399fe;
   --heading-color: #dfa612;
   --dark-text-color: #f9ffee;
   --dark-divider-bg-1: #ff8a00;
   --dark-divider-bg-2: #52142a;
-  --mobile-navbar-bg: #484848;
-  --mobile-menu-color: #ffffff;
   --contact-description-color: #f9ffee;
   --contact-links: #3399fe;
   --contact-heading-color: #dfa612;
-  --post-column-bg: #1a1d24;
-  --bookmarks-link-color: #f9ffee;
-  --strong-text: #ffffff;
 }
 
 html,
@@ -50,7 +27,7 @@ body {
 }
 
 body {
-  background: linear-gradient(to right, var(--bg-1), var(--bg-2));
+  background: var(--bg-2);
 }
 
 a {
@@ -287,7 +264,7 @@ a {
       background: url(./static/andy_hi_dark.png) no-repeat scroll 0 0
         transparent;
       background-size: 300px;
-      display: none;
+      opacity: 0;
     }
   }
 
@@ -310,7 +287,7 @@ a {
       font-weight: 700;
     }
     .description {
-      width: 310px;
+      width: 330px;
       color: var(--dark-text-color);
       margin-left: -140px;
       left: 50%;
@@ -376,7 +353,6 @@ a {
   height: 920px;
   position: relative;
   background-color: #1c2129;
-  background: linear-gradient(to right, #25241d, #1c2129);
   width: 100%;
   overflow: hidden;
   min-height: 800px;
@@ -391,7 +367,7 @@ a {
     }
   }
 
-  .toplights {
+  .top-lights {
     position: absolute;
     top: 0;
     background-position: top center;
@@ -423,7 +399,7 @@ a {
     z-index: 2;
   }
 
-  .andySit {
+  .andy-sit {
     background-image: url(./static/andySit.png);
     width: 310px;
     height: 480px;
@@ -448,7 +424,7 @@ a {
     margin-left: -400px;
   }
 
-  .nightstand {
+  .night-stand {
     background: url(./static/nightstand.png) no-repeat scroll 0 0 transparent;
     width: 347px;
     height: 260px;
@@ -476,7 +452,7 @@ a {
     .trash {
       display: none;
     }
-    .andySit {
+    .andy-sit {
       width: 260px;
       height: 430px;
       background-size: 410px;
@@ -485,7 +461,7 @@ a {
     .shelf {
       display: none;
     }
-    .nightstand {
+    .night-stand {
       width: 317px;
       height: 230px;
       background-size: 320px;
@@ -610,7 +586,7 @@ a {
       display: flex;
       & > .column {
         &:first-child {
-          flex-grow: 0.7;
+          flex-grow: 1;
         }
         &:last-child {
           flex-grow: 1;
@@ -679,7 +655,7 @@ a {
 
 footer {
   height: 50px;
-  background: linear-gradient(to right, #25241d, #1c2129);
+  background: #1c2129;
   p {
     text-align: center;
     font-size: 0.8rem;
@@ -710,7 +686,7 @@ footer {
 }
 
 body.lights-off {
-  background: linear-gradient(to right, var(--bg-1), var(--bg-2));
+  background: var(--bg-2);
 
   .dark-divider {
     opacity: 1;
@@ -721,10 +697,10 @@ body.lights-off {
 
     .andy-hi {
       &.hi-dark {
-        display: block;
+        opacity: 1;
       }
       &.hi-light {
-        display: none;
+        opacity: 0;
       }
     }
   }
@@ -734,7 +710,7 @@ body.lights-off {
     h2 {
       margin-top: 50px;
     }
-    .toplights {
+    .top-lights {
       width: 790px;
       position: relative;
       margin: 0 auto;
